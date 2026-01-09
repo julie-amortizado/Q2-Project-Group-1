@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2 Project</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+            font-family: Poppins;
+            background: white;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        nav.top-navbar {
+            border-bottom: solid #034a85 7px;
+        }
+
+        nav.footer-navbar {
+            margin-top: auto; 
+        }
+
+        .contact-container {
+            max-width: 1100px;
+            margin: 2rem auto 3rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .contact-container h1 {
+            color: #034a85;
+            font-size: 3rem; 
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            width: fit-content;
+        }
+
+        .contact-hr {
+            border: 0;
+            height: 2px;
+            background-color: #070054;
+            width: 300px; 
+            margin: 0 0 1.5rem 0;
+            border-left: 20px solid rgb(0, 5, 96); 
+            box-sizing: content-box; 
+        }
+
+        .contact-left p:first-of-type {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .contact-details p {
+            font-size: 1rem;
+            margin: 0.7rem 0;
+        }
+
+        .contact-details strong {
+            color: #000;
+        }
+
+        .contact-left p:last-of-type {
+            margin-top: 2rem;
+            font-size: 1rem;
+        }
+
+        /* Form Styles */
+        .form-field-label {
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        .form-field-label span {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        .name-fields-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .name-fields-row input {
+            width: 50%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            font-family: Poppins;
+        }
+
+        input[type="tel"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            font-family: Poppins;
+        }
+
+        textarea {
+            height: 95px;
+            resize: none;
+        }
+
+        .send-btn {
+            width: 100%;
+            background-color: #034a85;
+            color: white;
+            border: none;
+            padding: 0.6rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: Poppins;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light top-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">
+                <img src="https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/e01fd0f1-eda0-443b-ab56-74f748469f01/Header.png?format=1500w" 
+                     alt="OBMC" style="width: 350px; margin-right: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Campuses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control" type="text" placeholder="Log in">
+                    <button class="btn btn-primary" type="button">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="contact-container">
+        <div class="contact-left">
+            <h1>Contact Us</h1>
+            <hr class="contact-hr">
+            
+            <p>If you have questions, need more information, or want to schedule a visit, we are here to help.</p>
+            
+            <div class="contact-details">
+                <p><strong>Phone:</strong> +63 2 8722 9720 to 26</p>
+                <p><strong>Email:</strong> info@obmontessori.edu.ph</p>
+                <p><strong>Address:</strong> 3 Eisenhower St., Bgy. Greenhills, San Juan City, Metro Manila, Philippines</p>
+            </div>
+            
+            <p>Kindly fill out the form and we will get back to you.</p>
+        </div>
+
+        <div class="contact-right">
+            <div class="form-field-label">Name <span>(required)</span></div>
+            <div class="name-fields-row">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+
+            <div class="form-field-label">Phone <span>(required)</span></div>
+            <input type="tel" required>
+
+            <div class="form-field-label">Email <span>(required)</span></div>
+            <input type="email" required>
+
+            <div class="form-field-label">Campus</div>
+            <select>
+                <option>Select Campus</option>
+            </select>
+
+            <div class="form-field-label">Grade</div>
+            <select>
+                <option>Select Student Grade Level</option>
+            </select>
+
+            <div class="form-field-label">Message <span>(required)</span></div>
+            <textarea required></textarea>
+
+            <button class="send-btn">SEND</button>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg footer-navbar" style="background-color: #034a85; color: white;">
+        <div class="container">
+            <span class="navbar-text text-white">&copy; 2026 OBMC. All rights reserved.</span>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Privacy Policy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Terms of Service</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</body>
+</html>
