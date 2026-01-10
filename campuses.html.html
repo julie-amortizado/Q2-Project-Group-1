@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OB Montessori Campuses</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: Poppins, sans-serif;
+      background: #f9f9f9;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    nav.top-navbar {
+      border-bottom: solid #034a85 7px;
+    }
+
+    nav.footer-navbar {
+      margin-top: auto;
+    }
+
+    /* Decorative Circles */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0.25;
+    }
+
+    .circle1 { width: 300px; height: 300px; background: #034a85; top: 30px; left: -120px; }
+    .circle2 { width: 150px; height: 150px; background: #FFD700; top: 200px; right: -80px; }
+    .circle3 { width: 250px; height: 250px; background: #F26B38; bottom: 150px; left: -130px; }
+    .circle4 { width: 100px; height: 100px; background: #FF6F91; top: 400px; right: 50px; }
+    .circle5 { width: 180px; height: 180px; background: #8DD35F; bottom: 60px; left: 20px; }
+    .circle6 { width: 220px; height: 220px; background: #F9A825; top: 600px; right: -110px; }
+    .circle7 { width: 120px; height: 120px; background: #034a85; top: 100px; right: 150px; }
+    .circle8 { width: 270px; height: 270px; background: #FF6F91; bottom: 400px; left: -140px; }
+    .circle9 { width: 90px; height: 90px; background: #FFD700; top: 750px; left: 200px; }
+    .circle10 { width: 350px; height: 350px; background: #8DD35F; bottom: 20px; right: -150px; }
+
+    .campus-section {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .campus-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .campus-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .campus-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .campus-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .campus-card-body {
+      padding: 20px;
+    }
+
+    .campus-card-body h3 {
+      color: #034a85;
+      margin-bottom: 15px;
+    }
+
+    .campus-card-body p {
+      margin-bottom: 8px;
+    }
+
+    h1,
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Decorative Circles -->
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+  <div class="circle circle4"></div>
+  <div class="circle circle5"></div>
+  <div class="circle circle6"></div>
+  <div class="circle circle7"></div>
+  <div class="circle circle8"></div>
+  <div class="circle circle9"></div>
+  <div class="circle circle10"></div>
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light top-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/e01fd0f1-eda0-443b-ab56-74f748469f01/Header.png?format=1500w"
+             alt="OBMC"
+             style="width: 350px; margin-right: 50px;">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+          <li class="nav-item"><a class="nav-link" href="campuses.html">Campuses</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <form class="d-flex">
+          <input class="form-control" type="text" placeholder="Log in">
+          <button class="btn btn-primary" type="button">Login</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Campus Content -->
+  <div class="container my-5">
+    <h1 class="mb-5 text-center" style="color:#034a85;">Our Campuses</h1>
+
+    <div class="row g-4">
+
+      <!-- Greenhills -->
+      <div class="col-md-6 campus-section">
+        <div class="campus-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA-5G94AQC477uTv8eK9_Cpjyp1LOkE6EA9Q&s" alt="Greenhills Campus">
+          <div class="campus-card-body">
+            <h3>Greenhills Campus</h3>
+            <p><strong>Address:</strong> 123 Greenhills St, San Juan, Metro Manila</p>
+            <p><strong>Phone:</strong> (02) 1234-5678</p>
+            <p><strong>Email:</strong> greenhills@obmontessori.ph</p>
+            <p>Offers innovative programs and a nurturing environment for students of all levels.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fairview -->
+      <div class="col-md-6 campus-section">
+        <div class="campus-card">
+          <img src="https://obmontessori.orangeapps.ph/landing/obmontessori/images/FV%20Facade.jpg" alt="Fairview Campus">
+          <div class="campus-card-body">
+            <h3>Fairview Campus</h3>
+            <p><strong>Address:</strong> 45 Fairview Ave, Quezon City</p>
+            <p><strong>Phone:</strong> (02) 2345-6789</p>
+            <p><strong>Email:</strong> fairview@obmontessori.ph</p>
+            <p>Modern classrooms, playgrounds, and experienced teachers for holistic child development.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sta. Ana -->
+      <div class="col-md-6 campus-section">
+        <div class="campus-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz2CqIeMBugVmvL10MDekx5qQiXHWvWoGoFQ&s" alt="Sta. Ana Campus">
+          <div class="campus-card-body">
+            <h3>Sta. Ana Campus</h3>
+            <p><strong>Address:</strong> 78 Sta Ana Blvd, Manila</p>
+            <p><strong>Phone:</strong> (02) 3456-7890</p>
+            <p><strong>Email:</strong> staana@obmontessori.ph</p>
+            <p>Focuses on academic excellence while fostering creativity and values among students.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Las Piñas -->
+      <div class="col-md-6 campus-section">
+        <div class="campus-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_f_s5q8ErTHRdTw1VuORx-vxI92k4n7_syw&s" alt="Las Piñas Campus">
+          <div class="campus-card-body">
+            <h3>Las Piñas Campus</h3>
+            <p><strong>Address:</strong> 56 Las Piñas Rd, Las Piñas City</p>
+            <p><strong>Phone:</strong> (02) 4567-8901</p>
+            <p><strong>Email:</strong> laspinas@obmontessori.ph</p>
+            <p>Provides a safe and stimulating environment, encouraging both academic and personal growth.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Angeles -->
+      <div class="col-md-6 campus-section">
+        <div class="campus-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwNvQ3EQNhkmslegLdTzVtxrV1sbu_6BZkew&s" alt="Angeles Campus">
+          <div class="campus-card-body">
+            <h3>Angeles Campus</h3>
+            <p><strong>Address:</strong> 12 Angeles St, Pampanga</p>
+            <p><strong>Phone:</strong> (045) 123-4567</p>
+            <p><strong>Email:</strong> angeles@obmontessori.ph</p>
+            <p>Emphasizes community engagement, values formation, and quality education for every student.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <nav class="navbar navbar-expand-lg footer-navbar" style="background-color: #034a85;">
+    <div class="container">
+      <span class="navbar-text text-white">
+        &copy; 2026 OBMC. All rights reserved.
+      </span>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="#">Privacy Policy</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const sections = document.querySelectorAll('.campus-section');
+
+    function revealOnScroll() {
+      const windowBottom = window.innerHeight;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < windowBottom - 50) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+</body>
+</html>
