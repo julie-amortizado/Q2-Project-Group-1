@@ -1,82 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q2 Project</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Q2 Project</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; 
-            font-family: Poppins;
-            background: white;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
+  <style>
+    body {
+      min-height: 100vh;
+      font-family: Poppins, sans-serif;
+      background: white;
+    }
 
-        nav.top-navbar {
-            border-bottom: solid #034a85 7px;
-            position: sticky;
-            top: 0;
-        }
+    nav.top-navbar {
+      border-bottom: solid #034a85 7px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        nav.footer-navbar {
-            margin-top: auto; 
-        }
-    </style>
+    nav.footer-navbar {
+      margin-top: auto;
+    }
+
+    .hero-section {
+      min-height: 75vh;
+      background:
+        linear-gradient(to bottom,
+          rgba(255, 255, 255, 0) 55%,
+          white 100%
+        ),
+        url("https://cdn.discordapp.com/attachments/1146785330289188988/1461353326237978811/Untitled_design_6.png?ex=696a3ed7&is=6968ed57&hm=87e647410abb267d71d30869b5cdf541d187b66e4f372069dd6653f1a58167ec&");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+    }
+
+    .hero-content {
+      padding-top: 140px;
+      max-width: 600px;
+      text-align: start;
+    }
+
+    .hero-title {
+      color: #034a85;
+    }
+
+    .discover-section {
+      max-width: 1200px;
+      margin: 60px auto 40px auto;
+    }
+
+    .discover-title {
+      font-weight: 700;
+      font-size: 1.75rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .discover-images img {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .discover-images img:hover {
+      transform: scale(1.05);
+    }
+
+    .montessori-section {
+      max-width: 1200px;
+      margin: 0 auto 80px auto;
+      padding: 0 15px;
+    }
+
+    .montessori-title {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #034a85;
+      margin-bottom: 20px;
+    }
+
+    .montessori-content p {
+      margin-bottom: 1rem;
+    }
+
+    .montessori-image {
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (min-width: 768px) {
+      .montessori-row {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+      }
+      .montessori-text {
+        flex: 1 1 55%;
+      }
+      .montessori-image-col {
+        flex: 1 1 45%;
+      }
+    }
+  </style>
 </head>
 <body>
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light top-navbar">
-        <div class="container-fluid">
-            <a class="navbar-logo" href="index.html">
-                <img src="https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/e01fd0f1-eda0-443b-ab56-74f748469f01/Header.png?format=1500w" 
-                     alt="OBMC" style="width: 350px; margin-right: 50px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="campuses.html">Campuses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control" type="text" placeholder="Log in">
-                    <button class="btn btn-primary" type="button">Login</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-
-    <div class="container my-5">
-        <h1>obmc blahblah bahl</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light top-navbar">
+    <div class="container-fluid">
+      <a class="navbar-logo" href="index.html">
+        <img src="https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/e01fd0f1-eda0-443b-ab56-74f748469f01/Header.png?format=1500w" alt="OBMC" style="width: 350px; margin-right: 50px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+          <li class="nav-item"><a class="nav-link" href="campuses.html">Campuses</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Log in" />
+          <button class="btn btn-primary" type="button">Login</button>
+        </form>
+      </div>
     </div>
+  </nav>
 
-    <nav class="navbar navbar-expand-lg footer-navbar" style="background-color: #034a85; color: white;">
-        <div class="container">
-            <span class="navbar-text text-white">&copy; 2026 OBMC. All rights reserved.</span>
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Privacy Policy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Terms of Service</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <section class="hero-section">
+    <div class="hero-content text-start">
+      <h2 class="fw-bold display-6 hero-title">Educating Future Leaders</h2>
+      <p class="fs-5">At Operation Brotherhood Montessori Center, each child is nurtured in the holistic method of Dr. Maria Montessori. We focus on developing independence, confidence, and lifelong learning.</p>
+      <a href="aboutus.html" class="btn btn-primary mt-3">Learn More</a>
+    </div>
+  </section>
 
+  <section class="discover-section">
+    <h1 class="discover-title ">DISCOVER</h3>
+    <div class="row discover-images g-3">
+      <div class="col-6 col-md-3">
+        <img src="https://media.discordapp.net/attachments/1146785330289188988/1461350983303958529/image_6.png?ex=696a3ca9&is=6968eb29&hm=b59dae53e2f122743246c8266b853392461ce745022b1bbe33bbd84a585d7a17&=&format=webp&quality=lossless&width=776&height=548" alt="OBMC Student Watch">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="https://media.discordapp.net/attachments/1146785330289188988/1461350983631372419/image_7.png?ex=696a3ca9&is=6968eb29&hm=ef47b85da066bd481aa2f9f47192dab80dc6605bacf173ba7c8f08ef7c20bb3a&=&format=webp&quality=lossless&width=808&height=548" alt="Thank you, SM Southmall">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="https://cdn.discordapp.com/attachments/1146785330289188988/1461351832101064867/image_9.png?ex=696a3d73&is=6968ebf3&hm=918f1f7cc2b8baa8e85f0ee4a2797ddce90c96e3c2aa136185bfac590885c776&" alt="Service as the greatest form">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="https://media.discordapp.net/attachments/1146785330289188988/1461350983996014683/image_8.png?ex=696a3ca9&is=6968eb29&hm=234c3dde0607d57ba82a565889f6edf58ac2b92fca31917736327c276e60b868&=&format=webp&quality=lossless&width=808&height=548" alt="A wonderful day at SM Southmall">
+      </div>
+    </div>
+  </section>
+
+  <br><br>
+
+
+  <section class="montessori-section">
+    <h2 class="montessori-title">Advancing the Montessori Way</h2>
+    <div class="montessori-row">
+      <div class="montessori-text">
+        <br>
+        <p>At OBMC, we follow Dr. Maria Montessori’s educational philosophy.</p>
+        <p>The Montessori education emphasizes independence, freedom with responsibility, and respect for the child’s intellectual, spiritual, and social development.</p>
+        <br>
+        <p>Through collaborative work, conflict resolution, and leadership opportunities, children at OBMC gain the skills and confidence to become compassionate and engaged members of their communities.</p>
+        <p>At OBMC, education is not just about acquiring knowledge — it’s about nurturing the whole child for a lifetime of growth and contribution.</p>
+      </div>
+      <div class="montessori-image-col">
+        <img src="https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/94a0554e-f0cc-4c44-a0b2-7cb83b863254/SENIOR+HIGH+SCHOOL++PROGRAM+-+HERO+IMAGE+-+RAF09579.JPG?format=2500w" class="montessori-image" />
+      </div>
+    </div>
+  </section>
+
+  <nav class="navbar navbar-expand-lg footer-navbar" style="background-color: #034a85;">
+    <div class="container">
+      <span class="navbar-text text-white">&copy; 2026 OBMC. All rights reserved.</span>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Privacy Policy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Terms of Service</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </body>
 </html>
